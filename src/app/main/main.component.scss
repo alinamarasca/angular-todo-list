@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--elements-gap);
+}
+
+#todo-list {
+  border: 1px solid #fff;
+  padding: 2rem;
+}

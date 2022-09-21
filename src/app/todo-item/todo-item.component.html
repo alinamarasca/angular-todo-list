@@ -1,0 +1,19 @@
+<div class="check">
+  <input
+    id="done"
+    type="checkbox"
+    value="item.isDone"
+    [checked]="item.isDone"
+    (click)="isDone(item)"
+  />
+</div>
+<div class="content">
+  <div class="header">
+    <button class="delete" (click)="deleteItem(item)">X</button>
+    <p class="title">{{ item.title }}</p>
+  </div>
+  <!-- <p class="description">{{ item.description }}</p> -->
+  <div class="extra-info">
+    <p class="added">Added: {{ item.dateAdded | date: "short" }}</p>
+  </div>
+</div>

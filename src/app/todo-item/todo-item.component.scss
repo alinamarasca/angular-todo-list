@@ -1,0 +1,66 @@
+@use "../../_variables.scss" as *;
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: fit-content;
+  // background-color: rgba(rgba(255, 255, 255, 0.69), 0.8);
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(5);
+  color: var(--main-black);
+  padding: 1rem;
+  width: 100%;
+  height: fit-content;
+  box-shadow: 1px 6px 5px rgba(rgb(12, 13, 20), 0.5);
+
+  .check {
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 1rem;
+    position: relative;
+  }
+
+  .content {
+    width: 100%;
+    list-style: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-size: larger;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .delete {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+  }
+
+  .extra-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: gray;
+    font-size: small;
+
+    .added {
+      text-transform: lowercase;
+    }
+  }
+}
