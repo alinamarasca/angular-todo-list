@@ -2,12 +2,15 @@ import { Injectable } from '@angular/core';
 import { TodoItem } from '../interfaces/todo-item';
 import { LocalStorageService } from './local-storage.service';
 import { FilterEnum } from '../enums/filter';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodoService {
   myTodos: TodoItem[] = [];
+  filteredTodos = new Subject<TodoItem[]>();
+  currentFilter = '';
 
   constructor(private localStorageService: LocalStorageService) {
     this.myTodos = localStorageService.getTodos('MyTodos');
@@ -37,23 +40,20 @@ export class TodoService {
     this.getTodoList();
   }
 
-  setFilter(filterName: string) {
-    console.log('service', filterName);
-    if (filterName == FilterEnum.done) {
-      // let done = this.myTodos.filter((todo) => todo.isDone);
-      // console.log('filtered done', done);
+  filterTodos(filterName: string) {
+    if (filterName === 'all') {
+      const all = this.myTodos;
+      this.filteredTodos.next(all);
     }
-    if (filterName == FilterEnum.active) {
-      console.log('active');
-      let active = this.myTodos.filter((todo) => !todo.isDone);
-      console.log('filtered active', active);
+
+    if (filterName === 'active') {
+      const active = this.myTodos.filter((todo) => !todo.isDone);
+      this.filteredTodos.next(active);
     }
-    // if (filterName == FilterEnum.all) {
-    //   console.log('all');
-    //   let filtered = this.myTodos.filter((todo) => todo.isDone == false);
-    //   console.log('filtered active', filtered);
-    //   this.myTodos = [...filtered];
-    //   this.saveTodoList();
-    // }
+
+    if (filterName === 'completed') {
+      const completed = this.myTodos.filter((todo) => todo.isDone);
+      this.filteredTodos.next(completed);
+    }
   }
 }

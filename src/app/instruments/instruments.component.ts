@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FilterEnum } from '../enums/filter';
 import { TodoService } from '../services/todo.service';
 
@@ -9,14 +9,16 @@ import { TodoService } from '../services/todo.service';
 })
 export class InstrumentsComponent implements OnInit {
   filterEnum = FilterEnum;
-  filter = FilterEnum;
+  // @Output() changeFilter = new EventEmitter<FilterEnum>();
   constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {}
 
+  // select filter: completed or active
   setFilter($event: Event, filterName: FilterEnum) {
     $event.preventDefault();
-    console.log('sort', filterName);
-    this.todoService.setFilter(filterName);
+    this.todoService.filterTodos(filterName);
+    console.log(filterName);
+    // this.todoService.currentFilter = filterName;
   }
 }
