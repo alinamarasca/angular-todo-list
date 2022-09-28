@@ -22,5 +22,17 @@
         />Active</label
       >
     </li>
+    <li>
+      <label for="all"
+        ><input
+          checked
+          type="radio"
+          id="all"
+          value="all"
+          name="filter"
+          (change)="setFilter($event, filterEnum.all)"
+        />All</label
+      >
+    </li>
   </ul>
 </div>
