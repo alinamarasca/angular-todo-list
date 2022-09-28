@@ -35,8 +35,4 @@ export class MainComponent implements OnInit {
   toggleDone(todo: TodoItem) {
     this._todoService.toggleDone(todo);
   }
-
-  // emitted($event) {
-  //   console.log($event);
-  // }
 }

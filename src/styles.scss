@@ -24,7 +24,9 @@ ul {
   display: flex;
   flex-direction: column;
   gap: var(--elements-gap);
-  width: 400px;
+  min-width: 300px;
+  width: fit-content;
+
   li {
     list-style: none;
   }
@@ -32,4 +34,26 @@ ul {
 
 a {
   text-decoration: none;
+}
+// scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #0e0000;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(77, 1, 8);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
 }
