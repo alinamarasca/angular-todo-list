@@ -1,0 +1,38 @@
+<div>
+  <ul class="sort by:">
+    <li>
+      <label for="completed"
+        ><input
+          type="radio"
+          id="completed"
+          value="completed"
+          name="filter"
+          (change)="setFilter($event, filterEnum.done)"
+        />Completed</label
+      >
+    </li>
+    <li>
+      <label for="active"
+        ><input
+          type="radio"
+          id="active"
+          value="active"
+          name="filter"
+          (change)="setFilter($event, filterEnum.active)"
+        />Active</label
+      >
+    </li>
+    <li>
+      <label for="all"
+        ><input
+          checked
+          type="radio"
+          id="all"
+          value="all"
+          name="filter"
+          (change)="setFilter($event, filterEnum.all)"
+        />All</label
+      >
+    </li>
+  </ul>
+</div>

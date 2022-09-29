@@ -1,0 +1,28 @@
+@use "../../_variables.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--elements-gap);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow-y: none;
+}
+
+#todo-list {
+  height: 70vh;
+  padding: 2rem;
+  width: 600px;
+}
+
+ul {
+  overflow-y: auto;
+  width: 100%;
+  gap: 1rem;
+}
+
+li {
+  list-style: none;
+  background-color: #fff;
+}

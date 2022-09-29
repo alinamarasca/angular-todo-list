@@ -1,0 +1,23 @@
+:host {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 3rem;
+  }
+
+  li {
+    input {
+      margin-right: 1rem;
+    }
+  }
+}

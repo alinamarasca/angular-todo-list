@@ -1,0 +1,31 @@
+@use "../../variables" as *;
+
+.add-todo {
+  width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--elements-gap);
+}
+input {
+  width: 100%;
+  height: 49px;
+  padding: 0 1rem;
+  border-radius:$border-radius;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+button {
+  width: 49px;
+  height: 49px;
+  font-size: 30px;
+  border-radius:$border-radius; 
+  border: none;
+  background-color:$day-bgr;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--red);
+  }
+}

@@ -1,0 +1,14 @@
+<app-todo-form (newTodo)="addTodo($event)"></app-todo-form>
+<!-- to do  -->
+<ul id="todo-list">
+  <li *ngFor="let todo of renderedList">
+    <app-todo-item
+      [item]="todo"
+      (toDelete)="deleteTodo($event)"
+      (toMark)="toggleDone($event)"
+    >
+    </app-todo-item>
+  </li>
+</ul>
+
+<app-instruments> </app-instruments>

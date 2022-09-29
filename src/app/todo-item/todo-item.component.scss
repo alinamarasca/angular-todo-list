@@ -1,0 +1,87 @@
+@use "../../_variables.scss" as *;
+
+.check {
+  position: relative;
+  width: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 1rem;
+
+  input[type="checkbox"] {
+    opacity: 1;
+  }
+  input[type="checkbox"] {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  input[type="checkbox"]::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gray;
+  }
+  input[type="checkbox"]:checked::after {
+    position: absolute;
+    content: "";
+    left: 11px;
+    top: 16px;
+    width: 10px;
+    height: 20px;
+    border: solid $day-accent;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+:host {
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: row;
+  flex-wrap: nowrap;
+  height: fit-content;
+  color: $day-text;
+  padding: 1rem;
+  width: 100%;
+  height: fit-content;
+  gap: 1rem;
+
+  .content {
+    width: 100%;
+    list-style: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .delete {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+  }
+  //date
+  .extra-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: gray;
+    font-size: small;
+
+    .added {
+      text-transform: lowercase;
+    }
+  }
+}
