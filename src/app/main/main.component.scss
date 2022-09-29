@@ -1,4 +1,5 @@
-@use "../../_variables.scss";
+// @use "../../_variables.scss";
+@import "../../variables";
 
 :host {
   display: flex;
@@ -25,4 +26,7 @@ ul {
 li {
   list-style: none;
   background-color: #fff;
+  color: $day-text;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
 }

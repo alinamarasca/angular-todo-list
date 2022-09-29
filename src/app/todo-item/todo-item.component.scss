@@ -1,4 +1,4 @@
-@use "../../_variables.scss" as *;
+@import "../../_variables.scss";
 
 .check {
   position: relative;
@@ -10,7 +10,6 @@
   padding-top: 1rem;
 
   input[type="checkbox"] {
-    opacity: 1;
   }
   input[type="checkbox"] {
     cursor: pointer;
@@ -20,19 +19,21 @@
   input[type="checkbox"]::before {
     position: absolute;
     content: "";
+    left: -2px;
+    top: 10px;
     width: 30px;
     height: 30px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid gray;
+    background-color: $day-accent;
+    border-radius: $border-radius;
   }
   input[type="checkbox"]:checked::after {
     position: absolute;
     content: "";
-    left: 11px;
-    top: 16px;
+    left: 7px;
+    top: 10px;
     width: 10px;
     height: 20px;
-    border: solid $day-accent;
+    border: solid $day-light;
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -41,12 +42,8 @@
 }
 :host {
   display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: row;
   flex-wrap: nowrap;
   height: fit-content;
-  color: $day-text;
   padding: 1rem;
   width: 100%;
   height: fit-content;
@@ -58,18 +55,21 @@
   }
   .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 
     .title {
       font-weight: 500;
       text-transform: uppercase;
       margin-bottom: 0.5rem;
+      margin: auto 0;
     }
     .delete {
       background: transparent;
       border: none;
       cursor: pointer;
       align-self: flex-end;
+      margin: auto 0;
     }
   }
   //date
@@ -77,7 +77,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    color: gray;
+    color: rgba($day-text, 0.4);
     font-size: small;
 
     .added {

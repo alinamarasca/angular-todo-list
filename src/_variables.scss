@@ -1,6 +1,6 @@
-$day-bgr: rgb(221, 222, 230);
+$day-bgr: #f1f1f1;
 $day-light: #fff;
-$day-accent: rgb(0, 0, 142);
+$day-accent: #0f6dd2;
 $day-text: black;
 
 $night-bgr: black;
@@ -9,3 +9,4 @@ $night-accent: rgb(146, 4, 77);
 $night-text: #fff;
 
 $border-radius: 8px;
+$box-shadow: 1px 1px 4px desaturate(rgba($day-accent, 0.5), 30%);

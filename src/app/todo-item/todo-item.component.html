@@ -6,11 +6,12 @@
     [checked]="item.isDone"
     (click)="isDone(item)"
   />
-  <span class="checkmark"></span>
 </div>
 <div class="content">
   <div class="header">
-    <button class="delete" (click)="deleteItem(item)">X</button>
+    <button class="delete" (click)="deleteItem(item)">
+      <i class="bi bi-x-lg"></i>
+    </button>
     <p class="title">{{ item.title }}</p>
   </div>
   <!-- <p class="description">{{ item.description }}</p> -->

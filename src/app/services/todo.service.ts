@@ -31,7 +31,10 @@ export class TodoService {
   toggleDone(todo: TodoItem): void {
     todo.isDone = !todo.isDone;
     console.log('done', todo);
+    this.filterTodos(this.currentFilter);
+    console.log('toggle', this.currentFilter);
     this.saveTodoList();
+    this.getTodoList();
   }
   deleteItem(todo: TodoItem): void {
     const index = this.myTodos.indexOf(todo);
@@ -55,5 +58,6 @@ export class TodoService {
       const completed = this.myTodos.filter((todo) => todo.isDone);
       this.filteredTodos.next(completed);
     }
+    this.currentFilter = filterName;
   }
 }
