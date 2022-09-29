@@ -1,0 +1,14 @@
+@import "../../variables";
+
+article {
+  margin: auto;
+  width: 40%;
+  color: $day-text;
+  line-height: 200%;
+}
+
+span,
+li {
+  font-weight: 600;
+  color: $day-accent;
+}

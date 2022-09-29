@@ -1,11 +1,15 @@
-@use "../../_variables.scss" as *;
+@import "../../_variables.scss";
 
 header {
   display: flex;
   flex-direction: row;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   justify-content: space-between;
-  color: #fff;
+}
+a {
+  color: rgba($day-accent, 1);
+}
+i {
+  font-size: 40px;
 }
