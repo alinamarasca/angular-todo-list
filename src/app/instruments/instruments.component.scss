@@ -1,26 +1,26 @@
 @import "../../variables";
 
 :host {
-  position: fixed;
+  bottom: 0;
+  width: fit-content;
   display: flex;
   justify-content: center;
-  align-items: center;
-  bottom: 0;
-  width: 100%;
-  margin: auto;
+  width: 96%;
+  position: sticky;
 
   ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
-    gap: 3rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.5rem;
   }
 
   li {
     color: $day-accent;
     input {
-      margin-right: 1rem;
+      margin-right: 0.5rem;
     }
   }
 }

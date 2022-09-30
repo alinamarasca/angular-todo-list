@@ -1,14 +1,15 @@
 @use "../../variables" as *;
 
 :host {
-  width: 100%;
+  width: 96%;
 }
 .add-todo {
   display: flex;
   flex-wrap: nowrap;
-  gap: 2rem;
+  justify-content: space-between;
   margin-bottom: 1rem;
   width: 100%;
+  gap: 1rem;
 }
 
 input {
@@ -23,6 +24,8 @@ input {
 }
 
 button {
+  min-width: 49px;
+  min-height: 49px;
   width: 49px;
   height: 49px;
   font-size: 30px;
