@@ -1,12 +1,18 @@
 @use "../../variables" as *;
 
+:host {
+  width: 100%;
+}
 .add-todo {
   display: flex;
   flex-wrap: nowrap;
   gap: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
 }
+
 input {
-  width: 450px;
+  width: 100%;
   height: 49px;
   padding: 0 1rem;
   border-radius: $border-radius;

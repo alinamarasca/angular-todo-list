@@ -41,7 +41,7 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: $day-bgr;
+  box-shadow: inset $box-shadow;
   border-radius: $border-radius;
 }
 
