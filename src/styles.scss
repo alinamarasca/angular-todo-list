@@ -11,12 +11,13 @@
 body {
   color: #fff;
   background-color: $day-bgr;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 10vw, 1.2rem);
   line-height: 146%;
   font-family: sans-serif;
   padding: 2rem;
   width: 100vw;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 ul {
